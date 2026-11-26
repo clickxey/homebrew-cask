@@ -8,6 +8,10 @@ cask "claude-code@latest" do
          arm64_linux:  "50c305fcb8912851ce774429131d94ed6f84edbe3d8d0ed7a59dade5d893acc0",
          x86_64_linux: "a2df1f41bb00250992926420d0063f89b127cb81abdd284dbefb80c50ff1d026"
 
+  on_macos do
+    depends_on macos: :ventura
+  end
+
   url "https://downloads.claude.ai/claude-code-releases/#{version}/#{os}-#{arch}/claude"
   name "Claude Code"
   desc "Terminal-based AI coding assistant"
